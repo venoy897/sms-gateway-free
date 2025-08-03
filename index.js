@@ -1,10 +1,10 @@
 const http = require('http');
-const httpProxy = require('http-proxy');
-const proxy = httpProxy.createProxyServer({});
 
 const server = http.createServer((req, res) => {
-  proxy.web(req, res, { target: 'http://localhost:8080' });
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('V2Ray Dummy Server is running.\n');
 });
 
-console.log("WebSocket proxy listening on port 80");
-server.listen(80);
+server.listen(process.env.PORT || 3000, () => {
+  console.log('Server is up and running!');
+});
