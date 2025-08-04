@@ -1,1 +1,1 @@
-web: v2ray -config=/etc/v2ray/config.json
+web: ./v2ray run -config=config.json
