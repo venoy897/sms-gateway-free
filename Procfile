@@ -1,1 +1,1 @@
-web: node index.js
+web: v2ray -config=/etc/v2ray/config.json
